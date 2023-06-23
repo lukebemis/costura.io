@@ -4,7 +4,7 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
-document.title = "Costura Virtual ";
+document.title = "costura.io";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
