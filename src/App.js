@@ -1,6 +1,5 @@
-import React from 'react';
+import React, { useState }  from 'react';
 import './App.css';
-import './Home.css'
 import medicao from './medicao.png';
 import transferir from './transferir.png';
 import tabela from './tabela.png';
@@ -15,8 +14,8 @@ const App = () => {
         <Routes>
           <Route exact path="/" element={<Home />} />
           <Route path="/gerador-de-medidas" element={<GeradorDeMedidas />} />
-          <Route path="/historico-de-medidas" element={<HistoricoDeMedidas />} />
-          <Route path="/tabelas-de-medidas" element={<TabelasDeMedidas />} />
+          <Route path="/conversor-de-medidas" element={<ConversorDeMedidas />} />
+          <Route path="/tabela-de-medidas" element={<TabelaDeMedidas />} />
           <Route path="/historico-de-medidas" element={<HistoricoDeMedidas />} />
         </Routes>
       </div>
@@ -27,7 +26,7 @@ const App = () => {
 const Home = () => {
   return (
     <div>
-            <div className="container">
+      <div className="container">
       <div className="component1">
         <Link to="/gerador-de-medidas">
           <img src={transferir} alt="Imagem 1" className="image2" />
@@ -41,7 +40,7 @@ const Home = () => {
         <p>Conversor de Medidas</p>
       </div>
       <div className="component3">
-      <Link to="/tabelas-de-medidas">
+      <Link to="/tabela-de-medidas">
         <img src={tabela} alt="Imagem 3" className="image2" />
         </Link>
         <p>Tabela de Medidas</p>
@@ -60,20 +59,211 @@ const Home = () => {
 
 
 const GeradorDeMedidas = () => {
-  return <h1>Página do Gerador de Medidas</h1>;
+  return <div 
+  className="gerador-de-medidas">
+  <h1>medida em centímetros</h1>
+  <input
+   className="campoInput1"
+   type="text"
+   placeholder="Digite a medida em centímetros"
+  />
+  <p>Resultado:</p>
+  <div className="resultado"></div>
+</div>  
 };
 
 const ConversorDeMedidas = () => {
-  return <h1>Página do Conversor de Medidas</h1>;
+  return <div 
+  className="conversor-de-medidas">
+  <h1>medida em centímetros</h1>
+  <input
+   className="campoInput2"
+   type="text"
+   placeholder="Digite a medida em centímetros"/>
+   <h1>unidade para conversão</h1>
+   <div className="unidadeConversao"></div>
+   <p className="pResultado">Resultado:</p>
+   <div className="unidadeConversao"></div>
+</div>  
 };
 
-const TabelasDeMedidas = () => {
-  return <h1>Página do Tabelas de Medidas</h1>;
+const TabelaDeMedidas = () => {
+  return (
+    <table className="tabela-medidas">
+      <thead>
+        <tr>
+          <th>Medida 1</th>
+          <th>Medida 2</th>
+          <th>Medida 3</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+          <li>1</li>
+             <li>2</li>
+             <li>3</li>
+             <li>4</li>
+             <li>5</li>
+             <li>6</li>
+             <li>7</li>
+             <li>8</li>
+             <li>9</li>
+             <li>10</li>
+             <li>11</li>
+             <li>12</li>
+             <li>13</li>
+             <li>14</li>
+             <li>15</li>
+             <li>16</li>
+             <li>17</li>
+             <li>18</li>
+          </td>
+          <td>
+             <li>1</li>
+             <li>2</li>
+             <li>3</li>
+             <li>4</li>
+             <li>5</li>
+             <li>6</li>
+             <li>7</li>
+             <li>8</li>
+             <li>9</li>
+             <li>10</li>
+             <li>11</li>
+             <li>12</li>
+             <li>13</li>
+             <li>14</li>
+             <li>15</li>
+             <li>16</li>
+             <li>17</li>
+             <li>18</li>
+          </td>
+          <td>
+          <li>1</li>
+             <li>2</li>
+             <li>3</li>
+             <li>4</li>
+             <li>5</li>
+             <li>6</li>
+             <li>7</li>
+             <li>8</li>
+             <li>9</li>
+             <li>10</li>
+             <li>11</li>
+             <li>12</li>
+             <li>13</li>
+             <li>14</li>
+             <li>15</li>
+             <li>16</li>
+             <li>17</li>
+             <li>18</li>
+          </td>
+        </tr>
+        <tr>
+          <td>Medida 4</td>
+          <td>Medida 5</td>
+          <td>Medida 6</td>
+        </tr>
+      </tbody>
+    </table>
+  );
 };
+
 
 const HistoricoDeMedidas = () => {
-  return <h1>Página do Historico de Medidas</h1>;
+  return (
+    <div className="historico-medidas-container">
+      <div className="image-container">
+      <img src={consulta} alt="Imagem 4" className="image2" />
+      </div>
+      <div className="tables-container">
+        <table className="historico-medidas">
+        <table className="historico-medidas">
+      <thead>
+        <tr>
+          <th>Medida 1</th>
+          <th>Medida 2</th>
+          <th>Medida 3</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+          <li>1</li>
+             <li>2</li>
+             <li>3</li>
+             <li>4</li>
+             <li>5</li>
+             <li>6</li>
+             <li>7</li>
+             <li>8</li>
+             <li>9</li>
+             <li>10</li>
+             <li>11</li>
+             <li>12</li>
+             <li>13</li>
+             <li>14</li>
+             <li>15</li>
+             <li>16</li>
+             <li>17</li>
+             <li>18</li>
+          </td>
+          <td>
+             <li>1</li>
+             <li>2</li>
+             <li>3</li>
+             <li>4</li>
+             <li>5</li>
+             <li>6</li>
+             <li>7</li>
+             <li>8</li>
+             <li>9</li>
+             <li>10</li>
+             <li>11</li>
+             <li>12</li>
+             <li>13</li>
+             <li>14</li>
+             <li>15</li>
+             <li>16</li>
+             <li>17</li>
+             <li>18</li>
+          </td>
+          <td>
+          <li>1</li>
+             <li>2</li>
+             <li>3</li>
+             <li>4</li>
+             <li>5</li>
+             <li>6</li>
+             <li>7</li>
+             <li>8</li>
+             <li>9</li>
+             <li>10</li>
+             <li>11</li>
+             <li>12</li>
+             <li>13</li>
+             <li>14</li>
+             <li>15</li>
+             <li>16</li>
+             <li>17</li>
+             <li>18</li>
+          </td>
+        </tr>
+        <tr>
+          <td>Medida 4</td>
+          <td>Medida 5</td>
+          <td>Medida 6</td>
+        </tr>
+        
+      </tbody>
+    </table>
+        </table>
+      </div>
+    </div>
+  );
 };
+
 
 
 

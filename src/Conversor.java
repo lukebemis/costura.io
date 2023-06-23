@@ -1,8 +1,11 @@
 package general;
 
+import java.awt.*;
+import javax.swing.*;
 import java.util.Scanner;
+import general.ConversorMedidasRoupa.java;
 
-public class Conversor {
+public class Conversor extends JApplet {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int opcao = 0;
