@@ -1,2 +1,3 @@
 ### Aplicativo em React + Java.
-![image](https://github.com/lukebemis/trab-java-2/assets/51051129/b9087b55-8539-497e-ae34-e790e4c67ffc)
+![image](https://github.com/lukebemis/trab-java-2/assets/51051129/a86c0be5-cb74-4629-aaa6-c0f6bef66799)
+
